@@ -1,0 +1,9 @@
+<h1>Blog Posts</h1>
+<ol>
+  <% @posts.each do |post| %>
+    <a  href='post/<%=post.id%>'><li><%=post.title %></li></a>
+
+    <a href="/post/<%=post.id%>/comments">Comments</a>
+  <% end%>
+</ol>
+<a href="/">Homepage</a>

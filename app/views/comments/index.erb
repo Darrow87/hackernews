@@ -1,0 +1,18 @@
+<h1>
+<ol>
+<% @comments.each do |comment| %>
+    <li><%=comment.content %></li>
+  <% end%>
+</ol>
+</h1>
+
+<h1>Submit a comment here!</h1>
+<form action="/comments" method="POST">
+  <div>
+    <input type="text" name="comment[content]" placeholder="comment">
+    <input type= "hidden" name="comment[post_id]" value= "<%=@post.id%>"
+  </div>
+  <div>
+    <input type="submit" value="Comment">
+  </div>
+</form>
